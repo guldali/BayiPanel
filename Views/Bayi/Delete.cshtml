@@ -1,0 +1,49 @@
+﻿@model Bootstrap.Model.BayiKart
+
+@{
+    ViewBag.Title = "Delete";
+    //Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2></h2>
+<div class="text-center" >
+    <div style="color:brown">
+        <font size="20">
+            Silmek istediğinize emin misiniz?
+        </font>
+    </div>
+    
+</div>
+<div class="text-center">
+    <font size="5">
+        <h4></h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Unvan)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Unvan)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BayiHost)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BayiHost)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-danger" />
+                @Html.ActionLink("Geri", "Index", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </font>
+</div>

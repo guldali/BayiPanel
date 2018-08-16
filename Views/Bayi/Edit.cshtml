@@ -1,0 +1,254 @@
+﻿@model Bootstrap.Controllers.EditBayiControllerModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+<div class="text-center text-info">
+    <font size="12">Düzenle</font>
+</div>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal text-center">
+    <h4>BayiKart</h4>
+    <hr/>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Bayi.Id)
+
+    <div class="form-group">
+        <font size="5" >
+            @Html.LabelFor(model => model.Bayi.Unvan, htmlAttributes: new { @class = "control-label col-md-2 border:10px" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.Unvan, new { htmlAttributes = new { @class = "form-control text-center " } })
+                @Html.ValidationMessageFor(model => model.Bayi.Unvan, "", new { @class = "text-danger" })
+
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group center">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BayiHost, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.BayiHost, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.BayiHost, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BayiOpetAktarimi, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Bayi.BayiOpetAktarimi)
+                    @Html.ValidationMessageFor(model => model.Bayi.BayiOpetAktarimi, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BayiPort, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.BayiPort, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.BayiPort, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BayiApiVirtualDirectory, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.BayiApiVirtualDirectory, new { htmlAttributes = new { @class = "form-control form-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.BayiApiVirtualDirectory, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BayiApiVersion, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.BayiApiVersion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bayi.BayiApiVersion, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.OpetApiProtocol, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.OpetApiProtocol, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bayi.OpetApiProtocol, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.OpetApiHost, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Bayi.OpetApiHost, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bayi.OpetApiHost, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.OpetApiPort, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.OpetApiPort, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.OpetApiPort, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.OpetApiVirtualDirectory, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.OpetApiVirtualDirectory, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Bayi.OpetApiVirtualDirectory, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.OpetApiVersion, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.OpetApiVersion, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Bayi.OpetApiVersion, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.CronExpression, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.CronExpression, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Bayi.CronExpression, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.ApiId, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.ApiId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bayi.ApiId, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.ApiKey, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.ApiKey, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Bayi.ApiKey, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.BulkRecordLimit, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.BulkRecordLimit, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.BulkRecordLimit, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.ApiSqlServerTimeout, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Bayi.ApiSqlServerTimeout, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.Bayi.ApiSqlServerTimeout, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.SyncTables, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                @Html.ListBoxFor(model => model.SelectedSyncTables, Model.SyncTables, new { size = 10 })
+                @Html.ValidationMessageFor(model => model.Bayi.SyncTables, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.UseToken, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Bayi.UseToken)
+                    @Html.ValidationMessageFor(model => model.Bayi.UseToken, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.LogLevel, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.ListBoxFor(model => model.SelectedLogLevels, Model.LogLevels, new { size = 10 })
+                @Html.ValidationMessageFor(model => model.Bayi.LogLevel, "", new { @class = "text-danger" })
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.UseAutoScheduling, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Bayi.UseAutoScheduling)
+                    @Html.ValidationMessageFor(model => model.Bayi.UseAutoScheduling, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <font size="5">
+            @Html.LabelFor(model => model.Bayi.TestSync, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-12">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Bayi.TestSync)
+                    @Html.ValidationMessageFor(model => model.Bayi.TestSync, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </font>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-12">
+            <input type="submit" value="Kaydet" class="btn btn-success " />
+            @Html.ActionLink("Geri ", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>
+}
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

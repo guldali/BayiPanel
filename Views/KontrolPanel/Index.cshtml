@@ -1,0 +1,29 @@
+﻿
+@{ ViewBag.Title = "Index"; }
+@model IEnumerable<Bootstrap.Model.BayiKart>
+
+<h2>Index</h2>
+Kontrol panele hoş geldiniz.
+<h3>Bayi Listesi</h3>
+<table>
+    <tr>
+        <th>@Html.LabelFor(Model => Model.Id)</th>
+        <th>@Html.LabelFor(Model => Model.Unvan)</th>
+        <th>@Html.LabelFor(Model => Model.BayiHost)</th>
+    </tr>
+    foreach(item in model)
+    {
+    <tr>
+        <td>
+            Model.Id
+        </td>
+        <td>
+            Model.Unvan
+        </td>
+        <td>
+            Model.BayiHost
+        </td>
+    </tr>
+    }
+</table>
+

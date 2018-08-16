@@ -1,0 +1,176 @@
+﻿
+
+<h2>@ViewBag.Title</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="~/Content/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+</head>
+<body>
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+    <div class="text-center">
+        <font size="15">Gün Bazında Bayilerin Ciroları</font>
+    </div>
+    
+    <div class="container-fluid table-responsive" style="margin-top:20px;">
+        <table class="table table-hover table-striped table-bordered  " id="Bayiciro" style="width:100%">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Bayi Adı</th>
+                    <th scope="col">Bayi  Ciro</th>
+                    <th scope="col">Gün</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>02:07:2018:Pazartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>03:07:2018:Salı</th>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>04:07:2018:Çarsamba</th>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>05:07:2018:Perşembe</th>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>06:07:2018:Cuma</th>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>07:07:2018:Cumartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>08:07:2018:Pazar</th>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>09:07:2018:Pazartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>10:07:2018:Salı</th>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <th>Fikret</th>
+                    <th>5000</th>
+                    <th>11:07:2018:Çarşamba</th>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <th>Zengin</th>
+                    <th>5000</th>
+                    <th>02:07:2018:Pazartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <th>Zengin</th>
+                    <th>5000</th>
+                    <th>03:07:2018:Salı</th>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <th>Zengin</th>
+                    <th>5000</th>
+                    <th>04:07:2018:Çarsamba</th>
+                </tr>
+                <tr>
+                    <th scope="row">14</th>
+                    <th>Zengin</th>
+                    <th>5000</th>
+                    <th>05:07:2018:Perşembe</th>
+                </tr>
+                <tr>
+                    <th scope="row">15</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>06:07:2018:Cuma</th>
+                </tr>
+                <tr>
+                    <th scope="row">16</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>07:07:2018:Cumartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">17</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>08:07:2018:Pazar</th>
+                </tr>
+                <tr>
+                    <th scope="row">18</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>09:07:2018:Pazartesi</th>
+                </tr>
+                <tr>
+                    <th scope="row">19</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>10:07:2018:Salı</th>
+                </tr>
+                <tr>
+                    <th scope="row">20</th>
+                    <th>Uzn</th>
+                    <th>5000</th>
+                    <th>11:07:2018:Çarşamba</th>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
+
+    <script>
+
+      
+        $("#Bayiciro").DataTable({
+
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+            }
+        });
+         
+       
+    </script>
+
+</body>
+</html>
+
+

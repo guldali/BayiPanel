@@ -1,0 +1,86 @@
+﻿@model  Bootstrap.Model.Bayiler
+
+
+    @{
+        ViewBag.Title = "Ciro";
+
+    }
+<div class="text-center">
+    <font size="15">
+        Bayi Toplam Ciro
+    </font>
+</div>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link href="~/Content/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+    </head>
+    <body>
+
+        <script src="~/Scripts/jquery-3.3.1.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+        <script src="~/Scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+        @*<script src="~/Scripts/DataTables/jquery.dataTables.js"></script>*@
+
+        <div class="container-fluid table-responsive" style="margin-top:20px;">
+            <table class="table table-hover table-striped table-bordered  " id="ciro" style="width:100%">
+                <thead class="thead-dark">
+                    <tr>
+
+                        <th scope="col">Id</th>
+                        <th scope="col">Bayi Adı</th>
+                        <th scope="col">Bayi Toplam Ciro</th>
+                        <th scope="col">Opet Toplam Ciro</th>
+                        <th scope="col">Zaman</th>
+                        <th scope="col">Aksiyon</th>
+
+                    </tr>
+                </thead>
+
+
+            </table>
+
+            @*<a id="bayiCiro" href="BayiCiro" style="position:absolute;left:650px;top:650px; width:100px" class="btn btn-info">Detay</a>*@
+           
+        </div>
+        <script>
+            var dataSet = [
+                ["1", "Fikret", "5555", "5555", "02:07:2018 - 02:08:2018"],
+                ["2", "Kelkit", "5555", "5555", "02:07:2018 - 02:08:2018"],
+                ["3", "Uzn", "5555", "5555", "02:07:2018 - 02:08:2018"],
+                ["4", "Anafarta", "5555", "5000", "02:07:2018 - 02:08:2018"],
+                ["5", "Zengin", "5555", "5000", "02:07:2018 - 02:08:2018"]
+
+            ]
+            $(document).ready(function () {
+
+
+                var table = $("#ciro").DataTable({
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+
+                    },
+                    data: dataSet,
+                    "columnDefs": [{
+                        "targets": 5,//hedef yani butonun nerde olacağı
+                        "data": null,
+                        "defaultContent": "<button>Detay</button>"
+
+                    }]
+
+                });
+                //hangi bayi isteniyor ise datatable ile ara günlere bak:))
+                $('#ciro ').on('click', 'button', function () {
+   
+                    window.location.href = "BayiCiro";
+
+                });
+
+            });
+        </script>
+    </body>
+</html>

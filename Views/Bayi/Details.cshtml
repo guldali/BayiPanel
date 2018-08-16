@@ -1,0 +1,39 @@
+﻿@model Bootstrap.Model.BayiKart
+
+@{
+    ViewBag.Title = "Details";
+   // Layout = "~/Views/_ViewStart.cshtml";
+}
+<div class="text-center">
+    <div class="text-info">
+        <font size="15">Ayrıntılar</font>
+    </div>
+    <font size="5">
+        <div>
+            <h4></h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Unvan)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Unvan)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BayiHost)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.BayiHost)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Geri", "Index", null, new { @class = "btn btn-primary" })
+        </p>
+    </font>
+</div>

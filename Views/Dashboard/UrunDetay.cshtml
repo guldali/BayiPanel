@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "UrunDetay";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="text-center">
+        <font size="15">Ürün Analizi</font>
+    </div>
+    
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+
+
+    <div class="container-fluid table-responsive" style="width:100%;">
+        <table class="table table-hover table-striped table-bordered table-inverse " id="verilerUrun">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">İd</th>
+                    <th scope="col">Bayi Adı</th>
+                    <th scope="col">Ürün Sayısı</th>
+                    <th scope="col">Opet Ürün Sayısı</th>
+                    <th scope="col">Fark</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <th>Fikret</th>
+                    <th>50</th>
+                    <th>50</th>
+                    <th>0</th>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th>Zengin</th>
+                    <th>50</th>
+                    <th>52</th>
+                    <th>2</th>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th>Kelkit</th>
+                    <th>50</th>
+                    <th>50</th>
+                    <th>0</th>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script>
+        $("#verilerUrun").DataTable({
+
+            "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>

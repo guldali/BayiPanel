@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "OnlineOfflineDetay";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="text-center">
+        <font size="15">Online Offline Detay</font>
+    </div>
+    
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap4.min.js"></script>
+
+
+    <div class="container-fluid table-responsive" style="width:100%">
+        <table class="table table-hover table-striped table-bordered  " id="verilerUrun" style="width:100%; ">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">İd</th>
+                    <th scope="col">Bayi Adı</th>
+                    <th scope="col">Durum</th>
+                    <th scope="col">Zaman</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-success">
+                    <th scope="row">1</th>
+                    <th>Fikret</th>
+                    <th>Online</th>
+                    <th>06.08.2018 10:53 - 06.08.2018 11:00</th>
+                    
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">2</th>
+                    <th>Zengin</th>
+                    <th>Offline</th>
+                    <th>06.08.2018 10:53 - 06.08.2018 11:00</th>
+                    
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">3</th>
+                    <th>Kelkit</th>
+                    <th>Online</th>
+                    <th>06.08.2018 10:53 - 06.08.2018 11:00</th>
+                    
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script>
+        $("#verilerUrun").DataTable({
+            
+            "language": {
+             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+             }
+        });
+       
+    </script>
+
+    
+
+</body>
+
+
+</html>

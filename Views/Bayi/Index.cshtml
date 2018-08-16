@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Bootstrap.Model.BayiKart>
+
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/_ViewStart.cshtml";
+}
+<div class="text-center">
+    <h2>BAYİLER</h2>
+</div>
+<p>
+    <div style="position:absolute;left:300px;top:150px">
+        @Html.ActionLink("Bayi +", "Create", null, new { @class = "btn btn-info" })
+    </div>
+</p>
+<div class="container-fluid">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Id)      </th>
+                <th>@Html.DisplayNameFor(model => model.Unvan)   </th>
+                <th>@Html.DisplayNameFor(model => model.BayiOpetAktarimi)</th>
+                <th>@Html.DisplayNameFor(model => model.BayiHost)</th>
+                <th>Aksiyonlar</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Unvan)</td>
+                <td>@Html.DisplayFor(modelItem => item.BayiOpetAktarimi)</td>
+                <td>@Html.DisplayFor(modelItem => item.BayiHost)</td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class="btn btn-primary" }) 
+                    @Html.ActionLink("Ayrıntı", "Details", new { id = item.Id },new { @class="btn btn-info"}) 
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id },new { @class="btn btn-danger"})
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
